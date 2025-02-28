@@ -234,7 +234,7 @@ fn list_trips() {
         // 計画の表示
         for (i, trip) in trips.iter().enumerate() {
             println!(
-                "{}. {} {} → {} {} ({} {} ¥{})",
+                "{}. {} {} → {} {} ({}線 {} {}行 ¥{})",
                 i + 1,
                 trip.departure_time,
                 trip.departure_station,
@@ -242,6 +242,7 @@ fn list_trips() {
                 trip.arrival_station,
                 trip.line,
                 trip.train_type,
+                trip.destination,
                 trip.fare
             );
         }
